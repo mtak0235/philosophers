@@ -6,7 +6,7 @@
 /*   By: mtak <mtak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 19:37:46 by mtak              #+#    #+#             */
-/*   Updated: 2021/07/21 00:54:23 by mtak             ###   ########.fr       */
+/*   Updated: 2021/07/21 01:11:41 by mtak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	sleep_ms(long time)
 		present_time = get_time();
 		if (present_time - start_time > time)
 			break ;
-		usleep(100);
+		usleep(250);
 	}
 }
 
