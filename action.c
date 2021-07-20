@@ -6,13 +6,13 @@
 /*   By: mtak <mtak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 19:29:21 by mtak              #+#    #+#             */
-/*   Updated: 2021/07/20 19:34:06 by mtak             ###   ########.fr       */
+/*   Updated: 2021/07/20 21:12:33 by mtak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-void sleeping(t_philo *philo)
+void	sleeping(t_philo *philo)
 {
 	print_msg(" is sleeping\n", philo);
 	sleep_ms(philo->info.time_to_sleep);
@@ -44,8 +44,8 @@ void	*routine(void *p)
 		sleep_ms(20);
 	pthread_create(&monitor, NULL, check_status, p);
 	pthread_mutex_lock(philo->to_get);
-	while (g_overeating_philo < philo->info.philo_num &&
-		g_dead_philo == 0)
+	while (g_overeating_philo < philo->info.philo_num
+		&& g_dead_philo == 0)
 	{
 		pthread_mutex_unlock(philo->to_get);
 		eat(philo);

@@ -6,13 +6,13 @@
 /*   By: mtak <mtak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 19:37:29 by mtak              #+#    #+#             */
-/*   Updated: 2021/07/20 19:26:59 by mtak             ###   ########.fr       */
+/*   Updated: 2021/07/20 21:15:13 by mtak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-int		check_death(t_philo *philo)
+int	check_death(t_philo *philo)
 {
 	long	now;
 
@@ -32,11 +32,11 @@ int		check_death(t_philo *philo)
 	return (0);
 }
 
-int		check_full(t_philo *philo)
+int	check_full(t_philo *philo)
 {
-	if (philo->info.must_eat_num != -1 &&
-		philo->eat_count >= philo->info.must_eat_num &&
-		philo->status != FULL)
+	if (philo->info.must_eat_num != -1
+		&& philo->eat_count >= philo->info.must_eat_num
+		&& philo->status != FULL)
 	{
 		pthread_mutex_unlock(&philo->to_eat);
 		philo->status = FULL;

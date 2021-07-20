@@ -6,7 +6,7 @@
 #    By: mtak <mtak@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/19 19:09:29 by mtak              #+#    #+#              #
-#    Updated: 2021/07/20 19:23:07 by mtak             ###   ########.fr        #
+#    Updated: 2021/07/20 21:29:41 by mtak             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ OBJS		= 	$(SRCS:.c=.o)
 
 CC			=	gcc
 
-FLAG		= 	-Wall -Wextra -Werror -pthread
+FLAG		= 	-Wall -Wextra -Werror
 
 INCLUDES	= 	-I./
 

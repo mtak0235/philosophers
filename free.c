@@ -6,7 +6,7 @@
 /*   By: mtak <mtak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 19:28:31 by mtak              #+#    #+#             */
-/*   Updated: 2021/07/20 19:29:03 by mtak             ###   ########.fr       */
+/*   Updated: 2021/07/20 21:16:15 by mtak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	free_machine(
 	pthread_mutex_t *to_get
 )
 {
-	int i;
+	int	i;
 
 	i = -1;
 	while (++i < philos[0].info.philo_num)

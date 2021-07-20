@@ -6,15 +6,15 @@
 /*   By: mtak <mtak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 19:25:02 by mtak              #+#    #+#             */
-/*   Updated: 2021/07/20 19:31:46 by mtak             ###   ########.fr       */
+/*   Updated: 2021/07/20 21:23:58 by mtak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-int is_str_num(char *str)
+int	is_str_num(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -26,9 +26,10 @@ int is_str_num(char *str)
 	return (1);
 }
 
-int		init_info(t_info *info, int ag, char **av)
+int	init_info(t_info *info, int ag, char **av)
 {
-	int i;
+	int	i;
+
 	if (ag != 5 && ag != 6)
 		return (0);
 	i = 1;
@@ -53,10 +54,11 @@ int		init_info(t_info *info, int ag, char **av)
 
 int	init_mutexes(t_info *info)
 {
-	int i;
+	int	i;
 
 	i = -1;
-	info->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * info->philo_num);
+	info->forks = (pthread_mutex_t *)
+		malloc(sizeof(pthread_mutex_t) * info->philo_num);
 	if (info->forks == NULL)
 		return (0);
 	while (++i < info->philo_num)
@@ -69,7 +71,7 @@ int	init_mutexes(t_info *info)
 t_philo	*init_philos(t_info *info)
 {
 	int		i;
-	t_philo *philos;
+	t_philo	*philos;
 
 	philos = (t_philo *)malloc(sizeof(t_philo) * info->philo_num);
 	if (!philos)
