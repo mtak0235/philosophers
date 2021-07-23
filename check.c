@@ -6,7 +6,7 @@
 /*   By: mtak <mtak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 19:37:29 by mtak              #+#    #+#             */
-/*   Updated: 2021/07/20 21:15:13 by mtak             ###   ########.fr       */
+/*   Updated: 2021/07/24 00:41:48 by mtak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ int	check_death(t_philo *philo)
 		philo->status = DEAD;
 		pthread_mutex_lock(philo->to_get);
 		g_dead_philo += 1;
+		if (philo->info.max_idx == 0)
+		{
+			pthread_mutex_unlock(philo->left_fork);
+		}
 		pthread_mutex_unlock(philo->to_get);
 		return (1);
 	}

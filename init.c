@@ -6,7 +6,7 @@
 /*   By: mtak <mtak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 19:25:02 by mtak              #+#    #+#             */
-/*   Updated: 2021/07/20 21:23:58 by mtak             ###   ########.fr       */
+/*   Updated: 2021/07/24 00:31:54 by mtak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,7 @@ int	init_info(t_info *info, int ag, char **av)
 	info->must_eat_num = -1;
 	if (ag == 6)
 		info->must_eat_num = ft_atoi(av[5]);
-	if (info->philo_num < 2 || info->philo_num > 200 || info->time_to_die < 60
-		|| info->time_to_eat < 60 || info->time_to_sleep < 60)
-		return (0);
+	info->max_idx = info->philo_num - 1;
 	return (1);
 }
 

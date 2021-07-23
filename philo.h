@@ -6,7 +6,7 @@
 /*   By: mtak <mtak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 18:23:16 by mtak              #+#    #+#             */
-/*   Updated: 2021/07/20 21:28:47 by mtak             ###   ########.fr       */
+/*   Updated: 2021/07/24 00:28:49 by mtak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ typedef struct s_info
 	pthread_mutex_t	to_set;
 	pthread_mutex_t	to_get;
 	pthread_mutex_t	*forks;
+	int				max_idx;
 }					t_info;
 
 typedef struct s_philo
